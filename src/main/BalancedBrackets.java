@@ -29,6 +29,11 @@ public class BalancedBrackets {
             } else if (ch == ']') {
                 brackets--;
             }
+
+            // if there are ever more closing brackets than opening, it is automatically false
+            if (brackets < 0) {
+                return false;
+            }
         }
         return brackets == 0;
     }
